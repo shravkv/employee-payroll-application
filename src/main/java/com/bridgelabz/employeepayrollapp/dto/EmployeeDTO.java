@@ -1,14 +1,18 @@
 package com.bridgelabz.employeepayrollapp.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.Pattern;
+
 
 @Data
+
+
 public class EmployeeDTO {
 
-    private String firstName;
-    private String lastName;
-    private int age;
-    private long salary;
-    private String companyName;
-    private String department;
+    @Pattern(regexp = "^[A-Z][a-zA-Z]{2,}$",message = "Not a Valid Name")
+    private String name;
+    private int salary;
 }
