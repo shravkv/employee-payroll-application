@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 
 public class EmployeeModel {
 
+    private String lastName;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -33,6 +34,10 @@ public class EmployeeModel {
     }
 
     public EmployeeModel() {
+
+    }
+
+    public void setRegisterDate(LocalDateTime now) {
 
     }
 }
